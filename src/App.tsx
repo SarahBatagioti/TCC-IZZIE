@@ -1,10 +1,5 @@
-function App() {
+import { RoutesApp } from './routes/Routes'
 
-  return (
-    <>
-
-    </>
-  )
-}
+const App = () => <RoutesApp />
 
 export default App
