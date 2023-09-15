@@ -27,7 +27,7 @@ export default function Inicio() {
                 w={'full'}
             />
 
-            <Flex align={'left'} justify={'left'} ml={isMobile ? 10 : isTablet ? 10 : isNotebook ? 24 : isDesktop ? 24 : 0} mt={isMobile ? -780 : isTablet ? -390 : isNotebook ? -610 : isDesktop ? -730 : 0}>
+            <Flex align={'left'} justify={'left'} ml={isMobile ? 10 : isTablet ? 10 : isNotebook ? 24 : isDesktop ? 24 : 0} mt={isMobile ? -780 : isTablet ? -390 : isNotebook ? -610 : isDesktop ? -650 : 0}>
                 <Stack spacing={6} w={'full'} maxW={'3xl'}>
                     <Stack spacing={6}>
                         <Image src={Substract} alt="Bandeira com nome IZZIE Bengala Inteligente" width={isMobile ? 250 : isTablet ? 250 : isNotebook ? 370 : isDesktop ? 370 : 0} />
@@ -57,10 +57,10 @@ export default function Inicio() {
                 objectFit={'cover'}
                 src={NuvemBG1}
                 w={'full'}
-                mt={isMobile ? -780 : isTablet ? -16 : isNotebook ? -10 : isDesktop ? 3 : 0}
+                mt={isMobile ? -780 : isTablet ? -16 : isNotebook ? -10 : isDesktop ? -12 : 0}
             />
 
-            <HStack mt={isMobile ? -500 : isTablet ? -500 : isNotebook ? -780 : isDesktop ? -900 : 0} alignItems={'left'}>
+            <HStack mt={isMobile ? -500 : isTablet ? -500 : isNotebook ? -780 : isDesktop ? -800 : 0} alignItems={'left'}>
                 <Image
                     alt={'Bengala Início'}
                     objectFit={'cover'}
@@ -92,10 +92,10 @@ export default function Inicio() {
                 objectFit={'cover'}
                 src={NuvemBG2}
                 w={'full'}
-                mt={-75}
+                mt={-156}
             />
 
-            <Flex mt={-750} align="center" justify="space-between" h="100vh" p="20px" mx={20}>
+            <Flex mt={-820} align="center" justify="space-between" h="100vh" p="20px" mx={20}>
                 <Box
                     display="flex"
                     flexDirection="column"
@@ -159,10 +159,10 @@ export default function Inicio() {
                 objectFit={'cover'}
                 src={NuvemBG3}
                 w={'full'}
-                mt={-150}
+                mt={-190}
             />
 
-            <Box mt={-700}>
+            <Box mt={-750}>
                 <WithSpeechBubbles/>
             </Box>
 
