@@ -44,6 +44,10 @@ import {
           bottom: '-16px',
           left: '50%',
           transform: 'translateX(-50%)',
+        }}
+        _hover={{
+          transform: 'scale(1.1)',
+          transition: 'transform 0.3s',
         }}>
         {children}
       </Stack>
@@ -118,7 +122,7 @@ import {
                   'https://www.teammidwest.com/webres/Image/blog/Nick.png'
                 }
                 name={'Alamn'}
-                title={'Indivíduo com Cegueira Tota'}
+                title={'Indivíduo com Cegueira Total'}
               />
             </Testimonial>
             <Testimonial>
@@ -148,7 +152,7 @@ import {
                   'https://www.oozora-sakuranoki.com/wp-content/uploads/2023/07/%E5%90%8D%E7%A7%B0%E6%9C%AA%E8%A8%AD%E5%AE%9A%E3%81%AE%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3-2023-07-06T125821.358-768x768.png'
                 }
                 name={'Diego'}
-                title={'Indivíduo com Cegueira Tota'}
+                title={'Indivíduo com Cegueira Total'}
               />
             </Testimonial>
           </Stack>
