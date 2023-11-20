@@ -1,4 +1,4 @@
-import { Button, Flex, Heading, Image, Text, Stack, Grid, HStack, Box, VStack } from "@chakra-ui/react";
+import { Button, Flex, Image, Text, Stack, HStack, Box, VStack } from "@chakra-ui/react";
 import WithSubnavigation from "../components/Header"
 import { useBreakpointUi } from '../hooks/useBreakPointUi.tsx'
 import Substract from '../assets/Subtract.png'
