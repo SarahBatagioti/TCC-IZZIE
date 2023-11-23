@@ -14,10 +14,19 @@ import escolas from '../assets/escolas.png'
 import hospitais from '../assets/hospitais.png'
 import WithSpeechBubbles from '../components/SpeechBubbles.tsx'
 import LargeWithNewsletter from '../components/Footer.tsx'
+import { useRef } from 'react';
 import '../styles/styles.css'
 
 export default function Inicio() {
     const { isMobile, isTablet, isNotebook, isDesktop } = useBreakpointUi()
+
+    const izzieSectionRef = useRef<HTMLDivElement | null>(null);
+    const scrollToIzzieSection = () => {
+        if (izzieSectionRef.current) {
+            izzieSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <>
             <WithSubnavigation />
@@ -41,14 +50,15 @@ export default function Inicio() {
                     <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
                         <Button
                             rounded={'full'}
-                            bg={'blue.400'}
-                            color={'white'}
+                            bg={'white'}
+                            color={'#05ABFB'}
                             _hover={{
-                                bg: 'blue.500',
-                            }}>
+                                bg: 'blue.100',
+                            }}
+                            onClick={scrollToIzzieSection}
+                            >
                             Saiba Mais
                         </Button>
-                        <Button rounded={'full'}>Contatos</Button>
                     </Stack>
                 </Stack>
             </Flex>
@@ -60,7 +70,7 @@ export default function Inicio() {
                 mt={isMobile ? -780 : isTablet ? -16 : isNotebook ? -10 : isDesktop ? -12 : 0}
             />
 
-            <HStack mt={isMobile ? -500 : isTablet ? -500 : isNotebook ? -780 : isDesktop ? -800 : 0} alignItems={'left'}>
+            <HStack ref={izzieSectionRef} mt={isMobile ? -500 : isTablet ? -500 : isNotebook ? -780 : isDesktop ? -800 : 0} alignItems={'left'}>
                 <Image
                     alt={'Bengala Início'}
                     objectFit={'cover'}

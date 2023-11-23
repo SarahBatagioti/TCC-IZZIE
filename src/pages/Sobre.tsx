@@ -8,10 +8,19 @@ import NuvemBG3Sobre from '../assets/NuvensBG3Sobre.png'
 import ColumnsGrid from "../components/ColumnsGrid.tsx"
 import LargeWithNewsletter from '../components/Footer.tsx'
 import '../styles/styles.css'
+import { useRef } from 'react';
 import Perfil from "../components/Perfil.tsx";
 
 export default function Sobre() {
     const { isMobile, isTablet, isNotebook, isDesktop } = useBreakpointUi()
+
+    const izzieSectionRef = useRef<HTMLDivElement | null>(null);
+    const scrollToIzzieSection = () => {
+        if (izzieSectionRef.current) {
+            izzieSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <>
             <WithSubnavigation />
@@ -34,14 +43,15 @@ export default function Sobre() {
                     <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
                         <Button
                             rounded={'full'}
-                            bg={'blue.400'}
-                            color={'white'}
+                            bg={'white'}
+                            color={'#05ABFB'}
                             _hover={{
-                                bg: 'blue.500',
-                            }}>
+                                bg: 'blue.100',
+                            }}
+                            onClick={scrollToIzzieSection}
+                            >
                             Saiba Mais
                         </Button>
-                        <Button rounded={'full'}>Contatos</Button>
                     </Stack>
                 </Stack>
             </Flex>
@@ -53,7 +63,7 @@ export default function Sobre() {
                 mt={isMobile ? -780 : isTablet ? -16 : isNotebook ? -10 : isDesktop ? 12 : 0}
             />
 
-            <Box mt={isMobile ? -500 : isTablet ? -500 : isNotebook ? -780 : isDesktop ? -700 : 0}>
+            <Box ref={izzieSectionRef} mt={isMobile ? -500 : isTablet ? -500 : isNotebook ? -780 : isDesktop ? -700 : 0}>
                 <Stack spacing={0} align={'center'} textAlign={'center'} mb={10}>
                     <Text className="títuloAzul">
                         Quais as funções da Izzie?

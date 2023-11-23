@@ -148,8 +148,4 @@ const NAV_ITEMS: Array<NavItem> = [
         label: 'Sobre',
         href: '/sobre',
     },
-    {
-        label: 'Contatos',
-        href: '/popup',
-    },
 ]

@@ -17,7 +17,13 @@ interface FeatureProps {
 
 const Feature = ({ title, text, icon, bgColor }: FeatureProps) => {
   return (
-    <Stack align={'center'}>
+    <Stack
+      align={'center'}
+      _hover={{
+        transform: 'scale(1.1)', // Increase the scale on hover
+        transition: 'transform 0.3s ease-in-out', // Add a smooth transition
+      }}
+    >
       <Flex
         w={16}
         h={16}
@@ -26,14 +32,19 @@ const Feature = ({ title, text, icon, bgColor }: FeatureProps) => {
         color={'white'}
         rounded={'full'}
         bg={bgColor}
-        mb={1}>
+        mb={1}
+      >
         {icon}
       </Flex>
-      <Text fontWeight={600} color={bgColor} align={'center'} borderBottom={`2px solid ${bgColor}`} pb={1} mb={1}>{title}</Text>
-      <Text color={'gray.600'} maxW="150px" align={'center'}>{text}</Text>
+      <Text fontWeight={600} color={bgColor} align={'center'} borderBottom={`2px solid ${bgColor}`} pb={1} mb={1}>
+        {title}
+      </Text>
+      <Text color={'gray.600'} maxW="150px" align={'center'}>
+        {text}
+      </Text>
     </Stack>
-  )
-}
+  );
+};
 
 export default function ColumnsGrid() {
   return (
