@@ -142,14 +142,14 @@ interface NavItem {
 const NAV_ITEMS: Array<NavItem> = [
     {
         label: 'Início',
-        href: '#',
+        href: '/inicio',
     },
     {
         label: 'Sobre',
-        href: '#',
+        href: '/sobre',
     },
     {
         label: 'Contatos',
-        href: '#',
+        href: '/popup',
     },
 ]

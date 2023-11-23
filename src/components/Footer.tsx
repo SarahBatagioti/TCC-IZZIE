@@ -33,7 +33,7 @@ export default function LargeWithLogoCentered() {
           <Image src="/logo.svg" alt="Logo IZZIE" height={70} />
         </Flex>
         <Text pt={6} fontSize={'sm'} textAlign={'center'}>
-          © Sarah Batagioti, Eduarda Brito, Isabela Ilídio
+          © Sarah Batagioti, Eduarda Brito, Isabela Rodrigues
         </Text>
       </Box>
     </Box>
